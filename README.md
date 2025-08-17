@@ -26,5 +26,5 @@ The API implements rate limiting to prevent abuse. You can modify these limits b
 GLOBAL_RATE_LIMIT = 3
 GLOBAL_TIME_WINDOW_SECONDS = 60
 
-**Generating a Test Token**
+**Generating a Test Token:**
 The /chat endpoint is protected and requires a JWT token for authentication. For testing purposes, we can generate a valid token using jwt.io
