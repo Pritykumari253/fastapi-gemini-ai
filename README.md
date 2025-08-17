@@ -17,5 +17,14 @@ You can send a request to the chat API without an authentication token. These re
 **Authenticated Request**
 For a higher rate limit, we can authenticate by providing a JWT token. I made sure to replace GENERATED_TOKEN with a valid token.
 
+**Configuration**
+You can configure the system prompt by editing the src/prompts/system_prompt.md file.
+
+**Rate Limiting**
+The API implements rate limiting to prevent abuse. You can modify these limits by changing the constants in src/auth/throttling.py:
+
+GLOBAL_RATE_LIMIT = 3
+GLOBAL_TIME_WINDOW_SECONDS = 60
+
 **Generating a Test Token**
 The /chat endpoint is protected and requires a JWT token for authentication. For testing purposes, we can generate a valid token using jwt.io
